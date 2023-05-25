@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+
+  <children>
+    <ListView fx:id="listFilms" prefHeight="200.0" prefWidth="200.0" />
+    <GridPane>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+        <Label text="Фільтрація по акторах" GridPane.columnIndex="0" />
+        <ComboBox fx:id="actorsCombo" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <GridPane.margin>
+            <Insets left="150.0" />
+          </GridPane.margin></ComboBox>
+        <Label text="Фільтрація по форматах" GridPane.columnIndex="1" />
+        <ComboBox fx:id="formatsCombo" GridPane.columnIndex="1" GridPane.rowIndex="0" >
+          <GridPane.margin>
+            <Insets left="160.0" />
+          </GridPane.margin>
+        </ComboBox>
+      </children>
+    </GridPane>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="300.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#addNewFilm" prefHeight="26.0" prefWidth="114.0" text="Додати фільм" />
+        <Button mnemonicParsing="false" onAction="#deleteFilm" prefHeight="26.0" prefWidth="83.0" text="Вилучити" />
+      </children>
+    </HBox>
+  </children>
+</VBox>

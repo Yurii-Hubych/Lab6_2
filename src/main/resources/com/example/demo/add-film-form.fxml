@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AddFilmController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints />
+      <RowConstraints />
+
+    </rowConstraints>
+   <children>
+      <Label text="Назва фільму" />
+      <Label text="Дата виходу в прокат" GridPane.rowIndex="1" />
+      <Label text="Актори (вводити через кому)" GridPane.rowIndex="2" />
+      <Label text="Формату файлу" GridPane.rowIndex="3" />
+      <Label text="Розмір файлу" GridPane.rowIndex="4" />
+       <Label minWidth="300" text="Чи у вільному доступі? (true/false)" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onAction="#addFilmToFile" prefHeight="26.0" prefWidth="85.0" text="Зберегти" textAlignment="CENTER" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="63.0" />
+         </GridPane.margin></Button>
+      <TextField fx:id="name" GridPane.columnIndex="1" />
+      <TextField fx:id="date" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="actors" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="fileExtension" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="size" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+       <CheckBox fx:id="isFreeForAll" alignment="CENTER" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin></CheckBox>
+
+   </children>
+
+</GridPane>
